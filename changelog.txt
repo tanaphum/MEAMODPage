@@ -1,3 +1,30 @@
+# 0.13
+* Allow use with Jekyll 4 - pull request #113 by eheinrich
+* Navbar item highlights when subpage is active - pull request #107 by nextensible
+* Revamp the docs out of the readme and into the demo site
+* Fix notifications icon override
+* Update to Alpine.js v3
+
+# 0.12
+* Add blog post series
+* Update npm dependencies
+* Update gems
+
+# 0.11.2
+* Fix for sidebar is-tablet layout
+
+# 0.11.1
+* Update recipe layout with prep time, cook time, serves and keyword tags
+
+# 0.11
+* Added Recipe page layout
+* Added html lang attribute - pull request #96 by casperdci
+* Added Vimeo support and start time for YouTube - pull request #95 by boristsr
+
+# 0.10.6
+* Create tag partial - pull request #87 by DarthGandalf
+* Update navbar to use Alpine js
+
 # 0.10.5
 * Fix for content width with menubar_toc - pull request #85 by wangjunlem
 * Remove duplicate title tag in head - pull request #75 by cketti
