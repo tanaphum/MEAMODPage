@@ -1,19 +1,17 @@
-<!DOCTYPE html>
 {% if page.menubar or page.menubar_toc %}
-{% assign has_left_sidebar = true %}
+    {% assign has_left_sidebar = true %}
 {% endif %}
 
-{% if page.show_sidebar and has_left_sidebar  %}
-{% assign content_width = 'is-4' %}
-{% elsif page.show_sidebar or has_left_sidebar %}
-{% assign content_width = 'is-8' %}
-{% else %}
-{% assign content_width = 'is-12' %}
+{% if page.show_sidebar and has_left_sidebar  %} 
+    {% assign content_width = 'is-4' %} 
+{% elsif page.show_sidebar or has_left_sidebar %} 
+    {% assign content_width = 'is-8' %} 
+{% else %} 
+    {% assign content_width = 'is-12' %} 
 {% endif %}
 
-<html
- lang="{{ site.lang | default: 'en' }}"
- {% if site.fixed_navbar %}class="has-navbar-fixed-{{ site.fixed_navbar }}"{% endif %}>
+<!DOCTYPE html>
+<html {% if site.fixed_navbar %} class="has-navbar-fixed-{{ site.fixed_navbar }}" {% endif %}>
   {% include head.html %}
   <body>
     {% include header.html %}
@@ -23,7 +21,7 @@
     {% include callouts.html %}
     <section class="section">
         <div class="container">
-            <div class="columns is-multiline">
+            <div class="columns">
                 {% if page.menubar_toc %}
                 <div class="column is-4-desktop is-4-tablet">
                     {% assign contentsTitle = page.toc_title | default: 'Contents' %}
@@ -42,7 +40,7 @@
                     {{ content }}
                 </div>
                 {% if site.posts and page.show_sidebar %}
-                <div class="column is-4-desktop is-4-tablet">
+                <div class="column is-4-desktop is-12-tablet">
                     {% include latest-posts.html %}
                 </div>
                 {% endif %}
@@ -56,3 +54,4 @@
     {%- include footer-scripts.html -%}
   </body>
 </html>
+
