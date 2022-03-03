@@ -1,39 +1,28 @@
 ---
-layout: base
+layout: default
 ---
 
-{% include header.html type="post" %}
+<div class="content">
 
-<div class="container">
-  <div class="row">
-    <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+    <p>Published: {{ page.date | date: "%b %-d, %Y" }} by {{ page.author }}</p>
 
-      <article role="main" class="blog-post">
-        {{ content }}
-      </article>
+    {% if page.series %}
+        {% include series.html %}
+    {% endif %}
 
-      {% if page.social-share %}
-        {% include social-share.html %}
-      {% endif %}
-
-      <ul class="pager blog-pager">
-        {% if page.previous.url %}
-        <li class="previous">
-          <a href="{{ page.previous.url | prepend: site.baseurl | replace: '//', '/' }}" data-toggle="tooltip" data-placement="top" title="{{page.previous.title}}">&larr; Previous Post</a>
-        </li>
-        {% endif %}
-        {% if page.next.url %}
-        <li class="next">
-          <a href="{{ page.next.url | prepend: site.baseurl | replace: '//', '/' }}" data-toggle="tooltip" data-placement="top" title="{{page.next.title}}">Next Post &rarr;</a>
-        </li>
-        {% endif %}
-      </ul>
-
-      {% if page.comments %}
-        <div class="disqus-comments">
-          {% include disqus.html %}
-        </div>
-      {% endif %}
-    </div>
-  </div>
+    {{ content }}
 </div>
+
+<div class="tags">
+    {% for tag in page.tags %}
+      {% include tag.html tag=tag %}
+    {% endfor %}
+</div>
+
+{% unless site.hide_share_buttons %}
+{% include share-buttons.html %}
+{% endunless %}
+
+{% if site.disqus.shortname %}
+  {% include disqus.html %}
+{% endif %}

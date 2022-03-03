@@ -1,7 +1,8 @@
 ---
-layout: page
 title: Projects/Codes
 subtitle: This is where we share our software, codes, data and information of our projects
+layout: page
+show_sidebar: false
 ---
 
 # Projects
@@ -19,6 +20,7 @@ subtitle: This is where we share our software, codes, data and information of ou
 - [a web based mathematical modelling tool or *app* to support _Plasmodium  falciparum_ malaria elimination strategy design](https://moru.shinyapps.io/MDA_eff/)
 - [MARC Malaria Data Repository](https://moru.shinyapps.io/myanmar_data_repository/)
 - [Cambodia Malaria Outbreak Detection Tool](https://moru.shinyapps.io/CambodiaODT/)
+- [Modelling optimal strategies to screen and treat chronic Hepatitis C Virus infections](https://moru.shinyapps.io/webHepC/)
 
 
 
@@ -35,4 +37,3 @@ subtitle: This is where we share our software, codes, data and information of ou
 
 
 # Course Materials
-
