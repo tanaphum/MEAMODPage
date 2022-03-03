@@ -1,19 +1,18 @@
 # Site Settings
 lang: en
-title: Mathematical and Economic MODelling (MAEMOD)
-tagline: Mathematical and Economic MODelling (MAEMOD)
+title: Bulma Clean Theme
+tagline: Bulma Clean Theme
 email: your-email@domain.com
 description: >
   The demo site for Bulma Clean Theme, made for Jekyll and GitHub pages websites
-baseurl: ""
-url: ""
+baseurl: "/bulma-clean-theme"
+url: "https://www.csrhymes.com"
 permalink: pretty
 #favicon: /path/to/favicon.png
+gh_sponsor: chrisrhymes
 #hide_share_buttons: true
 #theme_color: '#eeeeee'
 #fixed_navbar: top
-#theme: bulma-clean-theme
-
 
 paginate: 5
 paginate_path: "/blog/page:num"
@@ -32,6 +31,7 @@ plugins:
   - jekyll-feed
   - jekyll-seo-tag
   - kramdown-parser-gfm
+  - jekyll-redirect-from
 
 exclude: 
   - Gemfile
@@ -79,4 +79,3 @@ collections:
     layout: product
     image: https://via.placeholder.com/800x600
     show_sidebar: false
-    
